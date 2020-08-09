@@ -1,0 +1,4 @@
+#!/bin/bash
+
+gcc -lstdc++ -Wall $1
+./a.out
