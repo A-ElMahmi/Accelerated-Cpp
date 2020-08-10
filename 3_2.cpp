@@ -34,7 +34,13 @@ int main() {
   int median = size % 2 == 0 ? (nums[mid] + nums[mid-1]) / 2
                              : nums[mid];
 
-  // vec_sz lower_mid = 
+  vec_sz lower_mid = mid / 2;
+  int lower = lower_mid % 2 == 0 ? (nums[lower_mid] + nums[lower_mid-1]) / 2
+                                 : nums[lower_mid];
+
+  vec_sz upper_mid = (mid+lower_mid) / 2;
+  int upper = upper_mid % 2 == 0 ? (nums[upper_mid] + nums[upper_mid-1]) / 2
+                                 : nums[upper_mid];
   
   return 0;
 }
