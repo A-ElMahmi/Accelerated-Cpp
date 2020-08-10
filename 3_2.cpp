@@ -41,6 +41,11 @@ int main() {
   vec_sz upper_mid = (mid+lower_mid) / 2;
   int upper = upper_mid % 2 == 0 ? (nums[upper_mid] + nums[upper_mid-1]) / 2
                                  : nums[upper_mid];
+
+  
+  cout << "Lower quartile: " << lower << endl
+       << "Median: " << median << endl
+       << "Upper quartile: " << upper << endl;
   
   return 0;
 }
