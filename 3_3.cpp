@@ -10,7 +10,7 @@ using std::vector;
 
 
 int main() {
-  cout << "Enter a list of distinct words: ";
+  cout << "Enter a list of words: ";
 
   vector<string> words;
   typedef vector<string>::size_type vec_sz;
@@ -20,7 +20,7 @@ int main() {
     words.push_back(x);
   
   
-  vec_sz distinct_words;
+  vec_sz distinct_words = 0;
 
   for (vec_sz i = 0; i != words.size(); ++i) {
     vec_sz same_word_count = 0;
@@ -34,7 +34,7 @@ int main() {
   }
 
 
-  cout << "There are " << distinct_words << "distinct words." << endl;
+  cout << "There are " << distinct_words << " distinct words." << endl;
   
   return 0;
 }
