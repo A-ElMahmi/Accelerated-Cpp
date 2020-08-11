@@ -36,7 +36,8 @@ int main() {
   }
 
   cout << "The shortest word is " << shortest
-       << " and the longest word is " << longest << endl;
+       << ", and the longest word is " << longest 
+       << "." << endl;
   
   return 0;
 }
