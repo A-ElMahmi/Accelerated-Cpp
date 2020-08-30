@@ -1,0 +1,11 @@
+LARGE.txt - 10,000 lines
+
+Old(erase):
+- 15.92 seconds
+- 16.73 seconds
+- 15.72 seconds
+
+New(insert/resize):
+- 13.13 seconds
+- 13.21 seconds
+- 14.88 seconds
