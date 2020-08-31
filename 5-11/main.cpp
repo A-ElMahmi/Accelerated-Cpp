@@ -27,7 +27,11 @@ vector<string> read_words(istream& is) {
   return vec;
 }
 
+<<<<<<< HEAD
 bool has_letters(const string& s, const string letters) {
+=======
+bool has_letters(const string& s, const string& letters) {
+>>>>>>> de21ca887fc5106d51564e1baac37bf00cbe52eb
   for (string::const_iterator i = s.begin(); i != s.end(); ++i)
     for (string::const_iterator j = letters.begin(); j != letters.end(); ++j)
       if (*i == *j)
@@ -37,11 +41,21 @@ bool has_letters(const string& s, const string letters) {
 }
 
 bool has_ascenders(const string& s) {
+<<<<<<< HEAD
   return has_letters(s, "bdfhklt");
 }
 
 bool has_descenders(const string& s) {
   return has_letters(s, "gjpqy");
+=======
+  string ascenders = "bdfhklt";
+  return has_letters(s, ascenders);
+}
+
+bool has_descenders(const string& s) {
+  string decenders = "gjpqy";
+  return has_letters(s, decenders);
+>>>>>>> de21ca887fc5106d51564e1baac37bf00cbe52eb
 }
 
 int main() {
@@ -51,6 +65,7 @@ int main() {
   string longest;
   for (vector<string>::size_type i = 0; i != words.size(); ++i) {
     if (!has_ascenders(words[i]) && !has_descenders(words[i])) {
+<<<<<<< HEAD
       if (words[i].size() > longest.size()) {
         longest = words[i];
       }  
@@ -58,6 +73,15 @@ int main() {
   }
 
   cout << "Longest word without ascenders of descenders: " << longest << endl;
+=======
+      // cout << words[i] << endl;
+      if (words[i].size() > longest.size())
+        longest = words[i];
+    }
+  }
+
+  cout << "Longest word: " << longest << endl;
+>>>>>>> de21ca887fc5106d51564e1baac37bf00cbe52eb
 
   return 0;
 }
